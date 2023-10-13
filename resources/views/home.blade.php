@@ -18,11 +18,11 @@
             </div>
     </section>
 
-    <section id="content" class="w-full mt-10">
+    <section id="content" class="w-full mt-10 mb-10">
       <p class="text-[1.2rem] text-secondary font-semibold mx-7">News Update</p>
-        <div class="grid grid-cols-8 mt-2">
-          <div class="col-span-8 md:col-span-4 lg:col-span-2">
-            <div class="carousel carousel-center w-full p-4 space-x-4 lg:space-x-8 rounded-box">
+        <div class="grid grid-cols-8 mt-2 mx-10 md:mx-auto">
+          <div class="col-span-8 md:col-span-4 lg:col-span-2 ">
+            <div class="carousel carousel-center w-full p-4 space-x-4 lg:space-x-8 rounded-box ">
                 <div class="card w-96 bg-base-100 shadow-xl">
                     <figure><img src="{{ url('img/lingkungan.jpg')}}" alt="game"/></figure>
                     <div class="card-body">
