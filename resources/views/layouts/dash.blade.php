@@ -14,5 +14,7 @@
 
     @yield('container')
 
+    <x-footer/>
+    
 </body>
 </html>

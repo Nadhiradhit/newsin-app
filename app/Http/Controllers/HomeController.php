@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     function index(){
-        $title = "Newsin";
+        $title = "NewsIN";
         return view("home", compact("title"));
     }
 }
