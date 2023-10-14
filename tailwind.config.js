@@ -4,6 +4,7 @@ export default {
     "./resources/**/*.blade.php",
     "./resources/**/*.js",
     "./reouurces/**/*.vue",
+    "./node_modules/flowbite/**/*.js",
   ],
   theme: {
     extend: {},
@@ -30,6 +31,7 @@ export default {
   },
   plugins: [
     require("daisyui"),
+    require('flowbite/plugin')
   ],
 }
 
