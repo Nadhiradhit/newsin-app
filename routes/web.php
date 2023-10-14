@@ -18,4 +18,9 @@ use Illuminate\Support\Facades\Route;
 Route::get("/", [HomeController::class, "index"])->name("home");
 
 // Login Auth
-Route::get("/login", [LoginController::class, "login"])->name("login");
+Route::get("/auth", [LoginController::class, "index"])->name("auth.login");
+
+// Dashboard Admin
+Route::prefix("administrator")->group(function(){
+    Route::get('/dasboard', );
+});
