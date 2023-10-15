@@ -5,6 +5,6 @@
     </svg>
 </button>
 
-<aside id="default-id" class="fixed top-0 left-0 z-40">
+<aside id="default-id" class="fixed top-0 left-0 z-40 w-72 ">
 
 </aside>
