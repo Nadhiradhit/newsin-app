@@ -8,16 +8,16 @@ use Illuminate\Http\Request;
 class LoginController extends Controller
 {
     
-    function index(){
+    public function index(){
         $title = "NewsIN Login Admin";
         return view("auth.login", compact("title"));
     }
 
-    function login(Request $request){
+    public function login(Request $request){
         
     }
 
-    function logout(){
+    public function logout(){
 
     }
 }
