@@ -33,7 +33,7 @@
           </label>
       </button>
       <button class="btn btn-secondary">
-        <a href="" class="text-white">Login</a>
+        <a href="{{ url('auth.login') }}" class="text-white">Login</a>
       </button>
     </div>
   </div>
