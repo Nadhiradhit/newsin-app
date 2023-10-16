@@ -9,7 +9,7 @@
     <div class="h-full px-3 py-4 overflow-y-auto bg-secondary">
         <a href="#" class="flex items-center pl-2.5 my-8">
             <img src="{{ url('img/newspaper.png') }}" class="h-6 mr-3 sm:h-7" alt="Flowbite Logo" />
-            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+            <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Dashboard</span>
         </a>
         <ul class="space-y-2 font-medium">
             <li>
