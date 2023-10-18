@@ -2,7 +2,7 @@
 
 @section('container')
 <div class="p-4 sm:ml-64">
-    <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700">
+    {{-- <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700"> --}}
        <div class="grid grid-cols-3 gap-4 mb-4">
          <div class="col-span-3">
          <div class="flex h-24 rounded bg-gray-50 justify-start py-7 px-8">
@@ -14,7 +14,7 @@
             <h1 class="font-bold sm:text-lg text-black">News Data Entry</h1>
             <input type="text" class="flex">
        </div>
-       <div class="w-full h-48 mb-4 mt-4 rounded bg-gray-50 ">
+       <div class="w-full h-48 mb-4 mt-4 rounded bg-gray-50">
           <div class="overflow-x-auto">
             <table class="table">
                {{-- thead --}}
@@ -37,7 +37,7 @@
                         <td>{{ $item->author }}</td>
                         <td>{{ $item->description_news }}</td>
                         <td>{{ $item->content }}</td>
-                        <td>{{ $item->categories_id }}</td>
+                        <td>{{ $item->category['name'] }}</td>
                         <td>
                            <div class="flex gap-2">
                               <button class="btn btn-info w-24 h-5">Edit</button>
@@ -50,7 +50,7 @@
             </table>
           </div>
        </div>
-       <div class="grid grid-cols-2 gap-4 mb-4">
+       {{-- <div class="grid grid-cols-2 gap-4 mb-4">
           <div class="flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
              <p class="text-2xl text-gray-400 dark:text-gray-500">
                 <svg class="w-3.5 h-3.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
@@ -116,7 +116,7 @@
                 </svg>
              </p>
           </div>
-       </div>
+       </div> --}}
     </div>
  </div>
 @endsection

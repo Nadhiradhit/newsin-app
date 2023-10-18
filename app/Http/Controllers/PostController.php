@@ -10,11 +10,22 @@ class PostController extends Controller
     public function index(){
         $title = "Dashboard Admin";
 
-        // Read Database
-        $post = Post::all();
+        // Read Database Post
+        $post = Post::with('category')->get();
         // dd($post);
         return view("admin.index", ["postData" => $post], compact("title"));
     }
+
+    public function create(){
+        
+        return view("admin.create");
+    }
+
+    public function store(){
+        
+    }
+
+    
 
 
 }
