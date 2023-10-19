@@ -25,6 +25,7 @@ Route::get("/", [LoginController::class, "index"])->name("auth.login");
 Route::prefix('dashboard')->group(function(){
     Route::get("/admin", [PostController::class, "index"])->name("admin.index");
     Route::get("/create-news", [PostController::class, "create"])->name("admin.create");
-    Route::get("/news" ,[PostController::class, "store"])->name("store-data");
+    Route::post("/news" ,[PostController::class, "store"])->name("store-data");
+    Route::get('/news-delete/{id}', [PostController::class, "delete"])->name("delete-data");
     Route::get("/detail-news/{id}", [PostController::class, "show"])->name("post.detail");
 });

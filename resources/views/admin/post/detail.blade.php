@@ -31,7 +31,7 @@
                                        <a href="">Edit</a>
                                     </button>
                                     <button class="btn btn-error w-20 h-5">
-                                        <a href="">Delete</a>
+                                        <a href="student-delete/{{$post->id}}">Delete</a>
                                      </button>
                                  </div>
                             </td>
