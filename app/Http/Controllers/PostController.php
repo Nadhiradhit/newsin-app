@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Category;
 use App\Models\Post;
 use App\Models\User;
 use Illuminate\Http\Request;
@@ -22,11 +23,13 @@ class PostController extends Controller
         
         $title = "Dashboard Admin | News";
 
-        return view("admin.create", compact("title"));
+        $category = Category::select('id', 'name')->get();
+
+        return view("admin.create", ["categoryData" => $category],compact("title"));
     }
 
-    public function store(){
-        
+    public function store(Request $request){
+        dd($request->all());
     }
 
     public function show($id){
