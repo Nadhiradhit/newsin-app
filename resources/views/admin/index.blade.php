@@ -8,13 +8,17 @@
          <div class="flex h-24 rounded bg-gray-50 justify-start py-7 px-8">
             <p class="text-2xl text-gray-700 font-semibold">
                Welcome To Dashboard, 
+               @foreach($userData as $data)
+               {{$data->name}}
+               @endforeach
             </p>
          </div>
+      
        <div class="flex justify-between gap-10 items-center mt-6">
             <h1 class="font-bold sm:text-lg text-black">News Data Entry</h1>
             <input type="text" class="flex">
        </div>
-       <div class="w-full h-48 mb-4 mt-4 rounded bg-gray-50">
+       <div class="w-full mb-4 mt-4 rounded bg-gray-50">
           <div class="overflow-x-auto">
             <table class="table">
                {{-- thead --}}
@@ -22,9 +26,7 @@
                   <tr>
                      <th>No</th>
                      <th>Judul</th>
-                     <th>Author</th>
                      <th>Description</th>
-                     <th>Content</th>
                      <th>Category</th>
                      <th>Action</th>
                   </tr>
@@ -34,14 +36,13 @@
                       <tr>
                         <td>{{ $loop->iteration }}</td>
                         <td>{{ $item->header }}</td>
-                        <td>{{ $item->author }}</td>
                         <td>{{ $item->description_news }}</td>
-                        <td>{{ $item->content }}</td>
                         <td>{{ $item->category['name'] }}</td>
                         <td>
                            <div class="flex gap-2">
-                              <button class="btn btn-info w-24 h-5">Edit</button>
-                              <button class="btn btn-error">Delete</button>
+                              <button class="btn btn-info w-20 h-5">
+                                 <a href="detail-news/{{$item->id}}">Detail</a>
+                              </button>
                            </div>
                         </td>
                       </tr>
