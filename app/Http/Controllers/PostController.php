@@ -29,7 +29,20 @@ class PostController extends Controller
     }
 
     public function store(Request $request){
-        dd($request->all());
+
+        $post = new Post;
+        $post->header = $request->header;
+        $post->category_id = $request->category_id;
+        $post->author = $request->author;
+        $post->description_news = $request->description_news;
+        $post->content = $request->content;
+
+        $post->save();
+
+        return redirect()->route("admin.create");
+
+        // Debug
+        // dd($request->all());
     }
 
     public function show($id){
@@ -40,6 +53,10 @@ class PostController extends Controller
         return view("admin.post.detail", ["post" => $post],compact("title"));
     }
 
+    public function delete($id){
+        $post = Post::findOrFail($id);
+        return view("admin.delete", ['post' => $post]);
+    }
     
 
 
