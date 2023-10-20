@@ -14,6 +14,13 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        
+        User::insert([
+            "name" => "Admin",
+            "role" => "Admin",
+            "email" => "admin@news-in.com",
+            "password" => bcrypt("rahasia"),
+            "created_at" => Carbon::now(),
+            "updated_at" => Carbon::now()
+        ]);
     }
 }
