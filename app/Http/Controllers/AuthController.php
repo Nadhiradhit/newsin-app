@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Role;
 use Illuminate\Http\Request;
+use App\Models\User;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 
 class AuthController extends Controller
@@ -30,7 +33,7 @@ class AuthController extends Controller
             Session::flash("status", "failed");
             Session::flash("message", "Login Wrong!!");
 
-            return redirect("/");
+            return redirect("/login");
     }
 
     public function logout(Request $request){
