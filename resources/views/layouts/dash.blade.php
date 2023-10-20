@@ -15,6 +15,17 @@
     @yield('container')
 
     <x-footer/>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                var toast = document.getElementById('myToast');
+                toast.classList.add(
+                'hidden');
+            },
+            3000);
+        });
+    </script>
     
 </body>
 </html>
