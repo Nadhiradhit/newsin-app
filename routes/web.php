@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\PostController;
+use App\Models\Category;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,7 +26,7 @@ Route::get("/logout", [AuthController::class, "logout"])->name("logout")->middle
 
 // Dashboard Admin
 // Route::prefix("admin")->group(function (){
-    Route::get("/news", [PostController::class, "index"])->name("admin.index")->middleware("auth");
+    Route::get("/news", [HomeController::class, "index"])->name("admin.index")->middleware("auth");
     Route::get("/news/{id}", [PostController::class, "show"])->name("post.detail")->middleware("auth");
     Route::get("/news-add", [PostController::class, "create"])->name("admin.create")->middleware("auth");
     Route::post("/new" ,[PostController::class, "store"])->name("store-data")->middleware("auth");
