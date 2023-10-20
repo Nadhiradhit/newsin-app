@@ -5,9 +5,17 @@
     <section id="form">
         <div class="p-4 sm:ml-64">
             <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg">
+                @if(Session::has("status"))
+                  <div id="myToast" class="toast toast-top toast-end z-20">
+                    <div class="alert alert-success">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        <span>{{Session::get("message")}}</span>
+                    </div>
+                  </div>
+            @endif
                 <div class="w-full text-black">
                     <h1 class="font-medium text-[1.5rem] my-2">Add Data NewsIn</h1>
-                    <form action="news" method="post">
+                    <form action="new" method="POST">
                         @csrf
                         <div class="mb-6 mt-6">
                             <label for="" class="block mb-2 font-medium">Judul</label>

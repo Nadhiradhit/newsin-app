@@ -68,7 +68,7 @@
                   @endforeach
                </tbody>
             </table>
-            <div class="flex justify-center my-2 ">
+            <div class="flex justify-center my-2">
                {{$postData->links()}}
             </div>
           </div>
