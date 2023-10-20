@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::table('post', function (Blueprint $table) {
             $table->unsignedBigInteger('category_id')->required()->after('id');
-            $table->foreign('category_id')->references('id')->on('categories');
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('restrict');;
         });
     }
 
