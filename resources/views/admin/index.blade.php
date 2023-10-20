@@ -5,12 +5,10 @@
     {{-- <div class="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700"> --}}
        <div class="grid grid-cols-3 gap-4 mb-4">
          <div class="col-span-3">
-         <div class="flex h-24 rounded bg-gray-50 justify-start py-7 px-8">
+         <div class="flex h-24 rounded bg-gray-50 justify-start py-7 px-8 border-2 border-gray-900">
             <p class="text-2xl text-gray-700 font-semibold">
                Welcome To Dashboard, 
-               @foreach($userData as $data)
-               {{$data->name}}
-               @endforeach
+               {{Auth::user()->name}}
             </p>
          </div>
       
@@ -31,11 +29,11 @@
                {{-- thead --}}
                <thead class="text-[1rem] font-medium text-black">
                   <tr>
-                     <th>No</th>
-                     <th>Judul</th>
-                     <th>Description</th>
-                     <th>Category</th>
-                     <th>Action</th>
+                     <th class="w-[5%]">No</th>
+                     <th class="w-[25%]">Judul</th>
+                     <th class="w-[25%]">Description</th>
+                     <th class="w-[25%]">Category</th>
+                     <th class="w-[25%]">Action</th>
                   </tr>
                </thead>
                <tbody>
