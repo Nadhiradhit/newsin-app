@@ -16,7 +16,6 @@
                            <th class="w-[25%]">Content</th>
                            <th class="w-[25%]">Category</th>
                            <th class="w-[25%]">Author</th>
-                           <th class="w-[25%]">Action</th>
                         </tr>
                      </thead>
                      <tbody>
@@ -25,19 +24,10 @@
                             <td>{{$post->content}}</td>
                             <td>{{$post->category->name}}</td>
                             <td>{{$post->author}}</td>
-                            <td>
-                                <div class="flex gap-2">
-                                    <button class="btn btn-primary w-20 h-5">
-                                       <a href="">Edit</a>
-                                    </button>
-                                    <button class="btn btn-error w-20 h-5">
-                                        <a href="student-delete/{{$post->id}}">Delete</a>
-                                     </button>
-                                 </div>
-                            </td>
                         </tr>
                      </tbody>
                 </div>
+            </div>
         </div>
     </div>
 @endsection
