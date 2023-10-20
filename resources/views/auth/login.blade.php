@@ -3,6 +3,14 @@
 @section('container')
     <section id="login">
         <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
+        @if(Session::has("status"))
+            <div id="myToast" class="toast toast-top toast-end z-20">
+              <div class="alert alert-error">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  <span>{{Session::get("message")}}</span>
+              </div>
+            </div>
+        @endif
             <a href="#" class="flex items-center mb-6 text-2xl font-medium text-gray-900">
                 <img class="w-8 h-8 mr-2" src="{{ url('img/newspaper.png')}}" alt="logo">
                     NewsIN Administrator   
@@ -12,7 +20,7 @@
                         <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl">
                             Sign in to your account
                         </h1>
-                    <form class="space-y-4 md:space-y-6" action="/admin/index">
+                    <form class="space-y-4 md:space-y-6" action="login" method="POST">
                         @csrf
                             <div class="my-3">
                                 <label for="email" class="block mb-2 text-sm font-medium text-gray-900">Email Admin</label>
