@@ -15,11 +15,11 @@ class PostController extends Controller
         $title = "Dashboard Admin";
 
         // Read Database Post
-        $user = User::all();
+       
         $post = Post::simplePaginate(5);
         // $post = Post::with('category')->get();
         // dd($post);
-        return view("admin.index", ["postData" => $post, "userData" => $user], compact("title"));
+        return view("admin.index", ["postData" => $post,], compact("title"));
     }
 
     public function create(){
